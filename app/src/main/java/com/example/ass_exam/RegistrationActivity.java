@@ -1,11 +1,8 @@
 package com.example.ass_exam;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.View;
@@ -16,7 +13,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.File;
 
 
 public class RegistrationActivity extends AppCompatActivity {
@@ -32,9 +28,6 @@ public class RegistrationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
-
-        ShareViaEmail("logs", "custom.csv");
-
         editTextPersonEmail = findViewById(R.id.editTextPersonEmail);
         editTextPersonName = findViewById(R.id.editTextPersonName);
         editTextPersonSurname = findViewById(R.id.editTextPersonSurname);
@@ -128,38 +121,6 @@ public class RegistrationActivity extends AppCompatActivity {
 
 
 
-
-//    String filename = "custom.csv";
-//    //        File filelocation = new File(Environment.getDataDirectory().getAbsolutePath() + "/logs/", filename);
-//    File filelocation = new File(getApplicationContext().getFilesDir() + "/logs/" + filename);
-//    Uri path = Uri.fromFile(filelocation);
-//    Intent emailIntent = new Intent(Intent.ACTION_SEND);
-//        emailIntent .setType("vnd.android.cursor.dir/email");
-//    String to[] = {"varga.jozef@icloud.com"};
-//        emailIntent .putExtra(Intent.EXTRA_EMAIL, to);
-//        emailIntent .putExtra(Intent.EXTRA_STREAM, path);
-//        emailIntent .putExtra(Intent.EXTRA_SUBJECT, "Subject");
-//    startActivity(Intent.createChooser(emailIntent , "Send email..."));
-
-
-    private void ShareViaEmail(String folder_name, String file_name) {
-        try {
-            File root= getApplicationContext().getFilesDir();
-            String filelocation= root.getAbsolutePath() + folder_name + "/" + file_name;
-            Intent intent = new Intent(Intent.ACTION_SENDTO);
-            intent.setType("text/plain");
-            String message="File to be shared is " + file_name + ".";
-            intent.putExtra(Intent.EXTRA_SUBJECT, "Subject");
-            intent.putExtra(Intent.EXTRA_STREAM, Uri.parse( "file://"+filelocation));
-            intent.putExtra(Intent.EXTRA_TEXT, message);
-            intent.setData(Uri.parse("mailto:varga.jozef@icloud.com"));
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
-            startActivity(intent);
-        } catch(Exception e)  {
-            System.out.println("is exception raises during sending mail"+e);
-        }
-    }
 
     boolean isEmail(EditText text) {
         CharSequence email = text.getText().toString();

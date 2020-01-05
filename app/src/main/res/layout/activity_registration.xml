@@ -97,7 +97,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/field"
-            android:hint="Email"
+            android:hint="Email (use ais)"
             android:inputType="textEmailAddress"
             android:padding="15dp"
             android:layout_marginTop="5dp"/>
