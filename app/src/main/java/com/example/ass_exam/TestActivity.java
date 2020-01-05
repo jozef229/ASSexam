@@ -4,18 +4,21 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
-import android.media.Image;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.behametrics.logger.Logger;
+
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity {
+public class TestActivity extends AppCompatActivity {
 
 
     private TextView countLabel;
@@ -109,7 +112,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_test);
+
+        Logger.start(this);
+        Logger.startNewSession();
+        Logger.log("Test",
+                "Start",
+                getIntent().getStringExtra("PERSON_GENDER"),
+                getIntent().getStringExtra("PERSON_HAND_TYPE"),
+                getIntent().getStringExtra("PERSON_HAND"),
+                getIntent().getStringExtra("PERSON_EMAIL"),
+                getIntent().getStringExtra("PERSON_NAME"),
+                getIntent().getStringExtra("PERSON_SURNAME"));
 
         countLabel = findViewById(R.id.countLabel);
         questionImage = findViewById(R.id.questionImage);
@@ -123,10 +137,9 @@ public class MainActivity extends AppCompatActivity {
         c = -1;
 
         for(int i = 0; i < quizData.length; i++){
+            System.out.println("pppppppppppppppppppppppppppppppp" + quizData.length + "aaa" + i);
             ArrayList<String> tmpArray = new ArrayList<>();
             generationNumber(i);
-            Random random = new Random();
-            int randomNum = random.nextInt(4);
 
             tmpArray.add(quizData[i][0]);
             tmpArray.add(quizData[i][2]);
@@ -171,9 +184,25 @@ public class MainActivity extends AppCompatActivity {
         if(btnText.equals(rightAnswer)){
             alertTitle = "Correct !!!";
             rightAnswerCount++;
+            Logger.log("Test",
+                    "Correct",
+                    getIntent().getStringExtra("PERSON_GENDER"),
+                    getIntent().getStringExtra("PERSON_HAND_TYPE"),
+                    getIntent().getStringExtra("PERSON_HAND"),
+                    getIntent().getStringExtra("PERSON_EMAIL"),
+                    getIntent().getStringExtra("PERSON_NAME"),
+                    getIntent().getStringExtra("PERSON_SURNAME"));
         }
         else{
             alertTitle = "Wrong !!!";
+            Logger.log("Test",
+                    "Wrong",
+                    getIntent().getStringExtra("PERSON_GENDER"),
+                    getIntent().getStringExtra("PERSON_HAND_TYPE"),
+                    getIntent().getStringExtra("PERSON_HAND"),
+                    getIntent().getStringExtra("PERSON_EMAIL"),
+                    getIntent().getStringExtra("PERSON_NAME"),
+                    getIntent().getStringExtra("PERSON_SURNAME"));
         }
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -182,6 +211,14 @@ public class MainActivity extends AppCompatActivity {
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
+                Logger.log("Test",
+                        "OK",
+                        getIntent().getStringExtra("PERSON_GENDER"),
+                        getIntent().getStringExtra("PERSON_HAND_TYPE"),
+                        getIntent().getStringExtra("PERSON_HAND"),
+                        getIntent().getStringExtra("PERSON_EMAIL"),
+                        getIntent().getStringExtra("PERSON_NAME"),
+                        getIntent().getStringExtra("PERSON_SURNAME"));
                 if(quizArray.size() < 1){
                     showResult();
                 }
@@ -201,18 +238,30 @@ public class MainActivity extends AppCompatActivity {
         builder.setTitle("Result");
         builder.setMessage(rightAnswerCount + " / " + quizData.length);
         builder.setPositiveButton("Try Again", new DialogInterface.OnClickListener() {
+
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
+                Logger.startNewSession();
                 recreate();
             }
         });
         builder.setNegativeButton("Quit", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
+
+
+
+
+
+                finishLogger();
                 finish();
             }
         });
         builder.show();
+    }
+
+    public void finishLogger(){
+        Logger.stop(this);
     }
 
     public void showNextQuiz(){
@@ -239,19 +288,27 @@ public class MainActivity extends AppCompatActivity {
     public void generationNumber(int i){
         Random random = new Random();
         int randomNum = 0;
-        while(true){
+
+        this.a = -1;
+        this.b = -1;
+        this.c = -1;
+        int exitValue = 0;
+
+        while(exitValue == 0){
+//            System.out.println("aaaaaaaa///////////aaaaaaaaa "+ this.a + " " + this.b + " " + this.c + " " + i);
             randomNum = random.nextInt(quizData.length);
-            if(a == -1){
-                if(randomNum != i) a = randomNum;
+            if(randomNum == i) continue;
+            if(this.a == -1){
+                this.a = randomNum;
             }
-            else if(b == -1){
-                if(randomNum != i && randomNum != a) b = randomNum;
+            else if(this.b == -1){
+                if(randomNum != this.a) this.b = randomNum;
             }
-            else if(c == -1){
-                if(randomNum != i && randomNum != a && randomNum != b) c = randomNum;
+            else if(this.c == -1){
+                if(randomNum != this.a && randomNum != this.b) this.c = randomNum;
             }
-            if(a != -1 && b != -1 && c != -1) {
-                break;
+            if(this.a != -1 && this.b != -1 && this.c != -1) {
+                exitValue = 1;
             }
         }
     }

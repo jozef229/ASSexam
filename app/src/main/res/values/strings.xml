@@ -1,3 +1,21 @@
 <resources>
-    <string name="app_name">ASS-exam</string>
+<string name="app_name">ASS-exam</string>
+<string-array name="hand_type_arrays">
+    <item>Hand localization:</item>
+    <item>Left</item>
+    <item>Right</item>
+</string-array>
+<string-array name="hand_arrays">
+    <item>Finger:</item>
+    <item>Thumb</item>
+    <item>Index finger</item>
+    <item>Middle finger</item>
+    <item>Ring finger</item>
+    <item>Little finger</item>
+</string-array>
+<string-array name="gender_arrays">
+    <item>Gender:</item>
+    <item>Male</item>
+    <item>Female</item>
+</string-array>
 </resources>
