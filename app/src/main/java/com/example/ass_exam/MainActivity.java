@@ -42,68 +42,68 @@ public class MainActivity extends AppCompatActivity {
             {"image_whole_part", "Whole Part", "Whole Part is Component Partitioning"},
             {"image_composite", "Composite", "Composite is Component Partitioning"},
             {"image_master_slave", "Master-Slave", "Master-Slave is Component Partitioning"},
-            {"image_half_object_protocol", "Half-Object + Protocol", "Half-Object + Protocol is Component Partitioning"},
-            {"image_replicated_component_group", "Replicated Component Group", "Replicated Component Group is Component Partitioning"},
-            {"image_page_controller", "Page Controller", "Page Controller is Application Control"},
-            {"image_front_controller", "Front Controller", "Front Controller is Application Control"},
-            {"image_application_controller", "Application Controller", "Application Controller is Application Control"},
-            {"image_command_processor", "Command Processor", "Command Processor is Application Control"},
-            {"image_template_view", "Template View", "Template View is Application Control"},
-            {"image_transform_view", "Transform View", "Transform View is Application Control"},
-            {"image_firewall_proxy", "Firewall Proxy", "Firewall Proxy is Application Control"},
-            {"image_authorization", "Authorization", "Authorization is Application Control"},
-            {"image_observer", "Observer", "Observer is Object Interaction"},
-            {"image_mediator", "Mediator", "Mediator is Object Interaction"},
-            {"image_command", "Command", "Command is Object Interaction"},
-            {"image_memento", "Memento", "Memento is Object Interaction"},
-            {"image_data_transfer_Object", "Data Transfer Object", "Data Transfer Object is Object Interaction"},
-            {"image_message", "Message", "Message is Object Interaction"},
-            {"image_bridge", "Bridge", "Bridge is Adaptation & Extension"},
-            {"image_object_adapter", "Object Adapter", "Object Adapter is Adaptation & Extension"},
-            {"image_chain_of_responsibility", "Chain of Responsibility", "Chain of Responsibility is Adaptation & Extension"},
-            {"image_interpreter", "Interpreter", "Interpreter is Adaptation & Extension"},
-            {"image_interceptor", "Interceptor", "Interceptor is Adaptation & Extension"},
-            {"image_decorator", "Decorator", "Decorator is Adaptation & Extension"},
-            {"image_visitor", "Visitor", "Visitor is Adaptation & Extension"},
-            {"image_template_method", "Template Method", "Template Method is Adaptation & Extension"},
-            {"image_strategy", "Strategy", "Strategy is Adaptation & Extension"},
-            {"image_wrapper_facade", "Wrapper Facade", "Wrapper Facade is Adaptation & Extension"},
-            {"image_null_object", "Null Object", "Null Object is Adaptation & Extension"},
-            {"image_execute_qround_object", "Execute-Around Object", "Execute-Around Object is Adaptation & Extension"},
-            {"image_messaging", "Messaging", "Messaging is Distribution Infrastructure"},
-            {"image_message_translator", "Message Translator", "Message Translator is Distribution Infrastructure"},
-            {"image_message_endpoint", "Message Endpoint", "Message Endpoint is Distribution Infrastructure"},
-            {"image_message_channel", "Message Channel", "Message Channel is Distribution Infrastructure"},
-            {"image_message_router", "Message Router", "Message Router is Distribution Infrastructure"},
-            {"image_publisher_subscriber", "Publisher-Subscriber", "Publisher-Subscriber is Distribution Infrastructure"},
-            {"image_broker", "Broker", "Broker is Distribution Infrastructure"},
-            {"image_client_proxy", "Client Proxy", "Client Proxy is Distribution Infrastructure"},
-            {"image_requestor", "Requestor", "Requestor is Distribution Infrastructure"},
-            {"image_invoker", "Invoker", "Invoker is Distribution Infrastructure"},
-            {"image_client_request_handler", "Client Request Handler", "Client Request Handler is Distribution Infrastructure"},
-            {"image_server_request_handler", "Server Request Handler", "Server Request Handler is Distribution Infrastructure"},
-            {"image_reactor", "Reactor", "Reactor is Event Demultiplexing & Dispatching"},
-            {"image_proactor", "Proactor", "Proactor is Event Demultiplexing & Dispatching"},
-            {"image_acceptor_connector", "Acceptor-Connector", "Acceptor-Connector is Event Demultiplexing & Dispatching"},
-            {"image_asynchronous_completion_token", "Asynchronous Completion Token", "Asynchronous Completion Token is Event Demultiplexing & Dispatching"},
-            {"image_explicit_interface", "Explicit Interface", "Explicit Interface is Interface Partitioning"},
-            {"image_extension_interface", "Extension Interface", "Extension Interface is Interface Partitioning"},
-            {"image_introspective_interface", "Introspective Interface", "Introspective Interface is Interface Partitioning"},
-            {"image_dynamic_invocation_interface", "Dynamic Invocation Interface", "Dynamic Invocation Interface is Interface Partitioning"},
-            {"image_proxy", "Proxy", "Proxy is Interface Partitioning"},
-            {"image_business_delegate", "Business Delegate", "Business Delegate is Interface Partitioning"},
-            {"image_facade", "Facade", "Facade is Interface Partitioning"},
-            {"image_combined_method", "Combined Method", "Combined Method is Interface Partitioning"},
-            {"image_iterator", "Iterator", "Iterator is Interface Partitioning"},
-            {"image_enumeration_method", "Enumeration Method", "Enumeration Method is Interface Partitioning"},
-            {"image_batch_method", "Batch Method", "Batch Method is Interface Partitioning"},
-            {"image_abstract_factory", "Abstract Factory", "Abstract Factory is Resource Management"},
-            {"image_builder", "Builder", "Builder is Resource Management"},
-            {"image_factory_method", "Factory Method", "Factory Method is Resource Management"},
-            {"image_objects_for_states", "Objects for States", "Objects for States is Modal Behaviour"},
-            {"image_mvc", "MVC", "MVC"},
-            {"image_microkernel", "Microkernel", "Microkernel"},
-            {"image_reflection", "Reflection", "Reflection"}
+            {"image_half_object_protocol", "Half-Object + Protocol", "Half-Object + Protocol is Component Partitioning"}
+//            {"image_replicated_component_group", "Replicated Component Group", "Replicated Component Group is Component Partitioning"},
+//            {"image_page_controller", "Page Controller", "Page Controller is Application Control"},
+//            {"image_front_controller", "Front Controller", "Front Controller is Application Control"},
+//            {"image_application_controller", "Application Controller", "Application Controller is Application Control"},
+//            {"image_command_processor", "Command Processor", "Command Processor is Application Control"},
+//            {"image_template_view", "Template View", "Template View is Application Control"},
+//            {"image_transform_view", "Transform View", "Transform View is Application Control"},
+//            {"image_firewall_proxy", "Firewall Proxy", "Firewall Proxy is Application Control"},
+//            {"image_authorization", "Authorization", "Authorization is Application Control"},
+//            {"image_observer", "Observer", "Observer is Object Interaction"},
+//            {"image_mediator", "Mediator", "Mediator is Object Interaction"},
+//            {"image_command", "Command", "Command is Object Interaction"},
+//            {"image_memento", "Memento", "Memento is Object Interaction"},
+//            {"image_data_transfer_Object", "Data Transfer Object", "Data Transfer Object is Object Interaction"},
+//            {"image_message", "Message", "Message is Object Interaction"},
+//            {"image_bridge", "Bridge", "Bridge is Adaptation & Extension"},
+//            {"image_object_adapter", "Object Adapter", "Object Adapter is Adaptation & Extension"},
+//            {"image_chain_of_responsibility", "Chain of Responsibility", "Chain of Responsibility is Adaptation & Extension"},
+//            {"image_interpreter", "Interpreter", "Interpreter is Adaptation & Extension"},
+//            {"image_interceptor", "Interceptor", "Interceptor is Adaptation & Extension"},
+//            {"image_decorator", "Decorator", "Decorator is Adaptation & Extension"},
+//            {"image_visitor", "Visitor", "Visitor is Adaptation & Extension"},
+//            {"image_template_method", "Template Method", "Template Method is Adaptation & Extension"},
+//            {"image_strategy", "Strategy", "Strategy is Adaptation & Extension"},
+//            {"image_wrapper_facade", "Wrapper Facade", "Wrapper Facade is Adaptation & Extension"},
+//            {"image_null_object", "Null Object", "Null Object is Adaptation & Extension"},
+//            {"image_execute_qround_object", "Execute-Around Object", "Execute-Around Object is Adaptation & Extension"},
+//            {"image_messaging", "Messaging", "Messaging is Distribution Infrastructure"},
+//            {"image_message_translator", "Message Translator", "Message Translator is Distribution Infrastructure"},
+//            {"image_message_endpoint", "Message Endpoint", "Message Endpoint is Distribution Infrastructure"},
+//            {"image_message_channel", "Message Channel", "Message Channel is Distribution Infrastructure"},
+//            {"image_message_router", "Message Router", "Message Router is Distribution Infrastructure"},
+//            {"image_publisher_subscriber", "Publisher-Subscriber", "Publisher-Subscriber is Distribution Infrastructure"},
+//            {"image_broker", "Broker", "Broker is Distribution Infrastructure"},
+//            {"image_client_proxy", "Client Proxy", "Client Proxy is Distribution Infrastructure"},
+//            {"image_requestor", "Requestor", "Requestor is Distribution Infrastructure"},
+//            {"image_invoker", "Invoker", "Invoker is Distribution Infrastructure"},
+//            {"image_client_request_handler", "Client Request Handler", "Client Request Handler is Distribution Infrastructure"},
+//            {"image_server_request_handler", "Server Request Handler", "Server Request Handler is Distribution Infrastructure"},
+//            {"image_reactor", "Reactor", "Reactor is Event Demultiplexing & Dispatching"},
+//            {"image_proactor", "Proactor", "Proactor is Event Demultiplexing & Dispatching"},
+//            {"image_acceptor_connector", "Acceptor-Connector", "Acceptor-Connector is Event Demultiplexing & Dispatching"},
+//            {"image_asynchronous_completion_token", "Asynchronous Completion Token", "Asynchronous Completion Token is Event Demultiplexing & Dispatching"},
+//            {"image_explicit_interface", "Explicit Interface", "Explicit Interface is Interface Partitioning"},
+//            {"image_extension_interface", "Extension Interface", "Extension Interface is Interface Partitioning"},
+//            {"image_introspective_interface", "Introspective Interface", "Introspective Interface is Interface Partitioning"},
+//            {"image_dynamic_invocation_interface", "Dynamic Invocation Interface", "Dynamic Invocation Interface is Interface Partitioning"},
+//            {"image_proxy", "Proxy", "Proxy is Interface Partitioning"},
+//            {"image_business_delegate", "Business Delegate", "Business Delegate is Interface Partitioning"},
+//            {"image_facade", "Facade", "Facade is Interface Partitioning"},
+//            {"image_combined_method", "Combined Method", "Combined Method is Interface Partitioning"},
+//            {"image_iterator", "Iterator", "Iterator is Interface Partitioning"},
+//            {"image_enumeration_method", "Enumeration Method", "Enumeration Method is Interface Partitioning"},
+//            {"image_batch_method", "Batch Method", "Batch Method is Interface Partitioning"},
+//            {"image_abstract_factory", "Abstract Factory", "Abstract Factory is Resource Management"},
+//            {"image_builder", "Builder", "Builder is Resource Management"},
+//            {"image_factory_method", "Factory Method", "Factory Method is Resource Management"},
+//            {"image_objects_for_states", "Objects for States", "Objects for States is Modal Behaviour"},
+//            {"image_mvc", "MVC", "MVC"},
+//            {"image_microkernel", "Microkernel", "Microkernel"},
+//            {"image_reflection", "Reflection", "Reflection"}
     };
 
     @Override
@@ -173,18 +173,17 @@ public class MainActivity extends AppCompatActivity {
             rightAnswerCount++;
         }
         else{
-            alertTitle = "Wrong ...";
+            alertTitle = "Wrong !!!";
         }
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(alertTitle);
-        builder.setMessage("Answer" + rightAnswer);
+        builder.setMessage("Answer: " + answer);
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                System.out.println("ppppppppppppppppppppppppppppppppppppp");
                 if(quizArray.size() < 1){
-
+                    showResult();
                 }
                 else{
                     quizCount++;
@@ -197,10 +196,27 @@ public class MainActivity extends AppCompatActivity {
         builder.show();
     }
 
+    public void showResult(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Result");
+        builder.setMessage(rightAnswerCount + " / " + quizData.length);
+        builder.setPositiveButton("Try Again", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                recreate();
+            }
+        });
+        builder.setNegativeButton("Quit", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                finish();
+            }
+        });
+        builder.show();
+    }
 
     public void showNextQuiz(){
-        System.out.println("xxxxxxxxxxxxxxxxxxxxxxx");
-        countLabel.setText("Question " + quizCount);
+        countLabel.setText("Question " + quizCount + " / " + quizData.length + "    (Score: " + rightAnswerCount + ")" );
         Random random = new Random();
         int randomNum = random.nextInt(quizArray.size());
         ArrayList<String> quiz = quizArray.get(randomNum);
